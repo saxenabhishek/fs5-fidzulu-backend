@@ -17,8 +17,10 @@ connection.getConnection();
 app.use(bodyParser.json());
 app.use(cors());
 app.use(foodRouter);
+app.use(laptopRouter);
 
 app.get('/', foodRouter);
+app.get('/', laptopRouter);
 
 app.listen(port, '0.0.0.0', () => {
   console.log(`Example app listening at http://localhost:${port}`);
