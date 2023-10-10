@@ -1,20 +1,13 @@
-const { getFoodDetails } = require('../models/productModel')
-const response = require('../configs/response')
-module.exports = {
-    getFood: async (req, res) => {
+const { getFoodDetails } = require('../models/productModel');
+const response = require('../configs/response');
+
+ const getFood =  async (req, res) => {
         try {
             const result = await getFoodDetails();
-
-            const dataResult = result.map(element => ({
-                id: element.FoodId,
-                name: element.FoodName,
-                category: element.Category,
-                shelfLife: element.ShelfLife,
-                dietaryPref: element.VegNonVeg
-            }))
-
+            console.log(result);
+           
             if (result.length) {
-                return response(res, 'List of Food', 200, true, dataResult);
+                return response(res, 'List of Food', 200, true, result);
             } else {
                 return response(res, 'There is no Items on list', 400, false)
             }
@@ -23,4 +16,5 @@ module.exports = {
         }
 
     }
-}
+
+exports.getFood = getFood
