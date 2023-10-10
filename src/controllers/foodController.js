@@ -24,4 +24,3 @@ module.exports = {
 
     }
 }
-FoodId(long), FoodName(String), Category(String), ShelfLife(number), Veg / Non - Veg(Boolean)
