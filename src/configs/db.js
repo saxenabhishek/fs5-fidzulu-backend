@@ -37,7 +37,7 @@ async function getConnection() {
       user: "scott", 
       password: "TIGER", 
       connectionString: oracleXeConnString
-  });
+  }).then(console.log("connected successfully"));
   return connection;
 }
 
