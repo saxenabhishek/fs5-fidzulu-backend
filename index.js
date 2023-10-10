@@ -2,13 +2,25 @@ require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+
+
+
+
+
+
+const foodRouter = require('./src/routes/foodRoute');
+const dvdRouter = require('./src/routes/dvdRoute');
+const bikeRouter = require('./src/routes/bikeRoute');
+const booksRouter = require('./src/routes/booksRoute');
+const laptopRouter = require('./src/routes/laptopRoute');
+const toysRouter = require('./src/routes/toysRoute');
+
+
 const app = express();
+app.use('/foodRoute',foodRouter);
 app.get('/', (req, res) => {
   res.json({'message': 'ok'});
 })
-
-app.use('/programming-languages', programmingLanguagesRouter);
-
 /* Error handler middleware */
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
@@ -19,5 +31,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, '0.0.0.0', () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at http://localhost:8080}`)
 });
