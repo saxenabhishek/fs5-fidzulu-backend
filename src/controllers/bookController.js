@@ -1,24 +1,13 @@
-const { getFoodDetails } = require('../models/productModel')
-const response = require('../configs/response')
-module.exports = {
-    getFood: async (req, res) => {
+const { getBookDetails } = require('../models/productModel');
+const response = require('../configs/response');
+
+ const getBook =  async (req, res) => {
         try {
-            const result = await getFoodDetails();
-
-            const dataResult = result.map(element => ({
-                id: element.BookId,
-                name: element.BookName,
-                author: element.Author,
-                genre: element.Genre,
-                publisher: element.Publisher,
-                isbn: element.ISBN,
-                price: element.Price,
-                rating: element.Rating,
-                imgUrl: element.ImageURL
-            }))
-
+            const result = await getBookDetails();
+            console.log(result);
+           
             if (result.length) {
-                return response(res, 'List of Books', 200, true, dataResult);
+                return response(res, 'List of Food', 200, true, result);
             } else {
                 return response(res, 'There is no Items on list', 400, false)
             }
@@ -27,4 +16,5 @@ module.exports = {
         }
 
     }
-}
+
+exports.getBook = getBook
