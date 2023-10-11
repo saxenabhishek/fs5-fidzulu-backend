@@ -2,27 +2,38 @@ const { getDvdDetails } = require('../models/productModel');
 const response = require('../configs/response');
 
 const usDvd = (result) => {
+
+    if(result == null){
+        return {};
+    }
     for (let res of result) {
         const precision = 2;
-        let price = res[5]
-        res[5] = Number((price + price * 0.18).toFixed(2));
+        let price = res[4]
+        res[4] = Number((price + price * 0.08).toFixed(2));
         
     }
     return result;
 }
 
 const irDvd = (result) => {
+
+    if(result == null){
+        return {};
+    }
     for (let res of result) {
-        let price = res[5]
-        res[5] = Number((price + price * 0.23).toFixed(2));
+        let price = res[4]
+        res[4] = Number((price + price * 0.23).toFixed(2));
     }
     return result;
 }
 
 const inDvd = (result) => {
+    if(result == null){
+        return {};
+    }
     for (let res of result) {
-        let price = res[5]
-        res[5] = Number((price + price * 0.08).toFixed(2));
+        let price = res[4]
+        res[4] = Number((price + price * 0.18).toFixed(2));
     }
     return result;
 }
@@ -49,3 +60,6 @@ const inDvd = (result) => {
     }
 
 exports.getDvd = getDvd
+exports.irDvd  = irDvd
+exports.inDvd = inDvd
+exports.usDvd = usDvd
