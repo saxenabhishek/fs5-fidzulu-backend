@@ -1,22 +1,45 @@
 const { getLaptopDetails } = require('../models/productModel');
 const response = require('../configs/response');
 
+const usLaptop = (result) => {
+    for (let res of result) {
+        let price = res[10];
+        res[10] = Number((price + price * 0.08).toFixed(2));
+    }
+    return result;
+} 
+
+const irLaptop = (result) => {
+    for (let res of result) {
+        let price = res[10];
+        res[10] = Number((price + price * 0.23).toFixed(2));
+    }
+    return result;
+} 
+
+const inLaptop = (result) => {
+    for (let res of result) {
+        let price = res[10]
+        res[10] = Number((price + price * 0.18).toFixed(2));
+    }
+    return result;
+}
+
  const getLaptop =  async (req, res) => {
         try {
-            const location = req.params.location;
             let result = await getLaptopDetails(); 
 
-            const locationMap = new Map();
-            locationMap.set("US-NC", 0.08);
-            locationMap.set("IE", 0.23);
-            locationMap.set("IN", 0.18);
+            switch(req.params.location){
+                case "US-NC" :  result = usLaptop(result)
+                                break;
+                case "IE" :     result = irLaptop(result)
+                                break;
+                case "IN" :     result = inLaptop(result)
+                                break;
+            };
 
-            if (result.length) {
-                for (let res of result) 
-                    res[10] = Number((res[10] * (1+locationMap.get(location))).toFixed(2));
-                
+            if (result.length) 
                 return response(res, 'List of Laptops', 200, true, result);
-            } 
             else 
                 return response(res, 'There are no items on this list', 400, false);            
         } 
