@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const laptopRouter = require('./src/routes/laptopRoute');
 const connection = require("./src/configs/db");
+const teamsRouter = require('./src/routes/teamsRoute');
 
 const app = express();
 const port = 3036;
@@ -13,7 +14,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use(laptopRouter);
+app.use(teamsRouter);
+
 app.get('/', laptopRouter);
+app.get('/',teamsRouter);
 
 app.listen(port, '0.0.0.0', () => {
   console.log(`Example app listening at http://localhost:${port}`);
