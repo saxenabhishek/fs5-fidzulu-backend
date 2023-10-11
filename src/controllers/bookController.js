@@ -3,16 +3,22 @@ const response = require('../configs/response');
 
 
 const usBook = (result) => {
+    if(result == null){
+        return {};
+    }
     for (let res of result) {
         const precision = 2;
         let price = res[5]
-        res[5] = Number((price + price * 0.18).toFixed(2));
+        res[5] = Number((price + price * 0.08).toFixed(2));
         
     }
     return result;
 }
 
 const irBook = (result) => {
+    if(result == null){
+        return {};
+    }
     for (let res of result) {
         let price = res[5]
         res[5] = Number((price + price * 0.23).toFixed(2));
@@ -21,9 +27,12 @@ const irBook = (result) => {
 }
 
 const inBook = (result) => {
+    if(result == null){
+        return {};
+    }
     for (let res of result) {
         let price = res[5]
-        res[5] = Number((price + price * 0.08).toFixed(2));
+        res[5] = Number((price + price * 0.18).toFixed(2));
     }
     return result;
 }
