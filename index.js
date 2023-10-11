@@ -6,7 +6,7 @@ const booksRouter = require('./src/routes/booksRoute');
 const connection = require("./src/configs/db");
 const teamsRouter = require('./src/routes/teamsRoute');
 const app = express();
-const port = process.env.PORT || 3034;
+const port = process.env.BOOK_PORT;
 connection.getConnection();
 
 app.use(bodyParser.json());
