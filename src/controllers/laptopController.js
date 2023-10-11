@@ -6,8 +6,8 @@ const usLaptop = (result) => {
         return {};
     }
     for (let res of result) {
-        let price = res[10];
-        res[10] = Number((price + price * 0.08).toFixed(2));
+        let price = res.Price;
+        res.Price = Number((price + price * 0.08).toFixed(2));
     }
     return result;
 } 
@@ -17,8 +17,8 @@ const irLaptop = (result) => {
         return {};
     }
     for (let res of result) {
-        let price = res[10];
-        res[10] = Number((price + price * 0.23).toFixed(2));
+        let price = res.Price;
+        res.Price = Number((price + price * 0.23).toFixed(2));
     }
     return result;
 } 
@@ -28,8 +28,8 @@ const inLaptop = (result) => {
         return {};
     }
     for (let res of result) {
-        let price = res[10]
-        res[10] = Number((price + price * 0.18).toFixed(2));
+        let price = res.Price;
+        res.Price = Number((price + price * 0.18).toFixed(2));
     }
     return result;
 }
