@@ -25,7 +25,7 @@ describe('inFood test', () => {
 });
 
 describe('irFood test', () => {
-  it('should add 8% tax to each item in the result array', () => {
+  it('should add 23% tax to each item in the result array', () => {
     const input = [
       [401, "Spaghetti", "Pasta", 3, 1, 49.99, 4.5, "https://shorturl.at/dwW56"],
       [402, "Lays", "Chips", 6, 1, 29.99, 3.8, "https://shorturl.at/oxBKZ"],
@@ -55,7 +55,7 @@ describe('irFood test', () => {
 });
 
 describe('usFood test', () => {
-  it('should add 8% tax to each item in the result array', () => {
+  it('should add 18% tax to each item in the result array', () => {
     const input = [
       [401, "Spaghetti", "Pasta", 3, 1, 49.99, 4.5, "https://shorturl.at/dwW56"],
       [402, "Lays", "Chips", 6, 1, 29.99, 3.8, "https://shorturl.at/oxBKZ"],
