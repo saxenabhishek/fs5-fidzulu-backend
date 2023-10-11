@@ -1,5 +1,5 @@
 const oracledb = require('oracledb');
-const { DB_USER, DB_PASSWORD, DB_CONNECT_STRING } = process.env;
+// const { DB_USER, DB_PASSWORD, DB_CONNECT_STRING } = process.env;
 const user = process.env.USER;
 const password = process.env.PASSWORD;
 const oracleXeConnString = process.env.CONNECTION_STRING;

@@ -3,9 +3,9 @@ const response = require('../configs/response');
 
 const usDvd = (result) => {
 
-    if(result == null){
+    if (!Array.isArray(result)) {
         return {};
-    }
+      }
     for(let res of result) {
         let price = res.Price
         res.Price = Number((price + price * 0.08).toFixed(2));
@@ -15,9 +15,9 @@ const usDvd = (result) => {
 
 const irDvd = (result) => {
 
-    if(result == null){
+    if (!Array.isArray(result)) {
         return {};
-    }
+      }
     for (let res of result) {
         let price = res.Price
         res.Price = Number((price + price * 0.23).toFixed(2));
@@ -26,9 +26,9 @@ const irDvd = (result) => {
 }
 
 const inDvd = (result) => {
-    if(result == null){
+    if (!Array.isArray(result)) {
         return {};
-    }
+      }
     for (let res of result) {
         let price = res.Price
         res.Price = Number((price + price * 0.18).toFixed(2));
