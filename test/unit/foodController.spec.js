@@ -80,7 +80,7 @@ describe('inFood test', () => {
 
   it('should handle invalid input gracefully', () => {
     const invalidData = null;
-    const result = usFood(invalidData);
+    const result = inFood(invalidData);
     expect(result).toEqual({});
   });
 });
