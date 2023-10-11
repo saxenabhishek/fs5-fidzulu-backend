@@ -1,5 +1,5 @@
 const router = require('express').Router()
 const {getBikes} = require('../controllers/bikeController')
 
-router.get('/',getBikes);
+router.get('/bikes/all/:location',getBikes);
 module.exports = router
