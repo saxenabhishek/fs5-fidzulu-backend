@@ -1,5 +1,7 @@
 // const db = require('./db');
 const oracledb = require('oracledb');
+const user = process.env.USER;
+const password = process.env.PASSWORD;
 
 const oracleXeConnString = `
   (DESCRIPTION =
@@ -13,9 +15,9 @@ const oracleXeConnString = `
 
 module.exports = async (query, data = '') => {
     const connection = await oracledb.getConnection({ 
-        user: "scott", 
-        password: "TIGER", 
-        connectionString: oracleXeConnString
+      user: user, 
+      password: password, 
+      connectionString: oracleXeConnString
     }).then(console.log("connected successfully"));
 
   return new Promise((resolve, reject) => {
