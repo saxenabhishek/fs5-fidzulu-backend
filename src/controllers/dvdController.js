@@ -6,11 +6,9 @@ const usDvd = (result) => {
     if(result == null){
         return {};
     }
-    for (let res of result) {
-        const precision = 2;
-        let price = res[4]
-        res[4] = Number((price + price * 0.08).toFixed(2));
-        
+    for(let res of result) {
+        let price = res.Price
+        res.Price = Number((price + price * 0.08).toFixed(2));
     }
     return result;
 }
@@ -21,8 +19,8 @@ const irDvd = (result) => {
         return {};
     }
     for (let res of result) {
-        let price = res[4]
-        res[4] = Number((price + price * 0.23).toFixed(2));
+        let price = res.Price
+        res.Price = Number((price + price * 0.23).toFixed(2));
     }
     return result;
 }
@@ -32,8 +30,9 @@ const inDvd = (result) => {
         return {};
     }
     for (let res of result) {
-        let price = res[4]
-        res[4] = Number((price + price * 0.18).toFixed(2));
+        let price = res.Price
+        res.Price = Number((price + price * 0.18).toFixed(2));
+
     }
     return result;
 }
