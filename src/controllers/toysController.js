@@ -5,8 +5,8 @@ const { getToyDetails } = require("../models/productModel")
 const usToys = (result) => {
     for (let res of result) {
         const precision = 2;
-        let price = res[5]
-        res[5] = Number((price + price * 0.08).toFixed(2));
+        let price = res.Price
+        res.Price = Number((price + price * 0.08).toFixed(2));
         
     }
     return result;
@@ -14,16 +14,16 @@ const usToys = (result) => {
 
 const ieToys = (result) => {
     for (let res of result) {
-        let price = res[5]
-        res[5] = Number((price + price * 0.23).toFixed(2));
+        let price = res.Price
+        res.Price = Number((price + price * 0.23).toFixed(2));
     }
     return result;
 }
 
 const inToys = (result) => {
     for (let res of result) {
-        let price = res[5]
-        res[5] = Number((price + price * 0.18).toFixed(2));
+        let price = res.Price
+        res.Price = Number((price + price * 0.18).toFixed(2));
     }
     return result;
 }
@@ -42,7 +42,7 @@ const getToys = async(req,res)=>{
         }
 
         if (result.length) {
-            return response(res, 'List of Food', 200, true, result);
+            return response(res, 'List of Toys', 200, true, result);
         } else {
             return response(res, 'There is no Items on list', 400, false)
         }
