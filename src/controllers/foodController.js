@@ -49,3 +49,6 @@ const inFood = (result) => {
     }
 
 exports.getFood = getFood
+exports.inFood =inFood
+exports.usFood = usFood
+exports.irFood = irFood
