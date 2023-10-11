@@ -1,39 +1,29 @@
 const { getFoodDetails } = require('../models/productModel');
 const response = require('../configs/response');
 const inFood = (result) => {
-    if(result == null){
-        return {};
-    }
     for (let res of result) {
-        const precision = 2;
-        let price = res[5]
-        res[5] = Number((price + price * 0.18).toFixed(2));
-        
-    }
-    return result;
-}
+        let price = res.Price
+        res.Price = Number((price + price * 0.18).toFixed(2));
 
-const irFood = (result) => {
-    if(result == null){
-        return {};
-    }
-    for (let res of result) {
-        let price = res[5]
-        res[5] = Number((price + price * 0.23).toFixed(2));
     }
     return result;
-}
+ }
 
-const usFood = (result) => {
-    if(result == null){
-        return {};
-    }
+ const irFood = (result) => {
     for (let res of result) {
-        let price = res[5]
-        res[5] = Number((price + price * 0.08).toFixed(2));
+        let price = res.Price
+        res.Price = Number((price + price * 0.23).toFixed(2));
     }
     return result;
-}
+ }
+
+ const usFood = (result) => {
+    for(let res of result) {
+        let price = res.Price
+        res.Price = Number((price + price * 0.08).toFixed(2));
+    }
+    return result;
+ }
 
  const getFood =  async (req, res) => {
         try {
