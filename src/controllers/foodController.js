@@ -1,6 +1,9 @@
 const { getFoodDetails } = require('../models/productModel');
 const response = require('../configs/response');
 const usFood = (result) => {
+    if(result == null){
+        return {};
+    }
     for (let res of result) {
         const precision = 2;
         let price = res[5]
@@ -11,6 +14,9 @@ const usFood = (result) => {
 }
 
 const irFood = (result) => {
+    if(result == null){
+        return {};
+    }
     for (let res of result) {
         let price = res[5]
         res[5] = Number((price + price * 0.23).toFixed(2));
@@ -19,6 +25,9 @@ const irFood = (result) => {
 }
 
 const inFood = (result) => {
+    if(result == null){
+        return {};
+    }
     for (let res of result) {
         let price = res[5]
         res[5] = Number((price + price * 0.08).toFixed(2));
@@ -49,3 +58,6 @@ const inFood = (result) => {
     }
 
 exports.getFood = getFood
+exports.inFood =inFood
+exports.usFood = usFood
+exports.irFood = irFood
