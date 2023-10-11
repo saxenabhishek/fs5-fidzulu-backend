@@ -4,7 +4,7 @@ const response = require('../configs/response');
  const usBikes = (result) => {
     for (let res of result) {
         let price = res[5]
-        res[5] = Number((price + price * 0.18).toFixed(2));
+        res[5] = Number((price + price * 0.08).toFixed(2));
         console.log(res[5] + "THIS IS FOR US");
 
     }
@@ -23,7 +23,7 @@ const response = require('../configs/response');
  const inBikes = (result) => {
     for(let res of result) {
         let price = res[5]
-        res[5] = Number((price + price * 0.08).toFixed(2));
+        res[5] = Number((price + price * 0.18).toFixed(2));
         console.log(res[5]);
 
     }
