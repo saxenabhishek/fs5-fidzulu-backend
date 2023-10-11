@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Akhil P",
+    "department": "Backend",
+    "imageLink": "https://example.com/images/johndoe.jpg",
+    "teamName": "Backend Monsters",
+    "quote": "Life is like a bicycle, to keep your balance you must keep moving.",
+    "corpid": "ak1234"
+  },
+  {
+    "name": "Ayushi",
+    "department": "Backend",
+    "imageLink": "https://example.com/images/janesmith.jpg",
+    "teamName": "Backend Monsters",
+    "quote": "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
+    "corpid": "ay5678"
+  },
+  {
+    "name": "Sucheth Hegde",
+    "department": "Backend",
+    "imageLink": "https://example.com/images/michaeljohnson.jpg",
+    "teamName": "Backend Monsters",
+    "quote": "The only way to do great work is to love what you do.",
+    "corpid": "sh7890"
+  },
+  {
+    "name": "Hritam Dutta",
+    "department": "Backend",
+    "imageLink": "https://example.com/images/emilydavis.jpg",
+    "teamName": "Backend Monsters",
+    "quote": "Strive not to be a success, but rather to be of value.",
+    "corpid": "hd1234"
+  },
+  {
+    "name": "Siva Kailash",
+    "department": "Backend",
+    "imageLink": "https://example.com/images/robertwilson.jpg",
+    "teamName": "Backend Monsters",
+    "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "corpid": "sk5678"
+  },
+  {
+    "name": "Vaibhav Singh",
+    "department": "Backend",
+    "imageLink": "https://example.com/images/lindabrown.jpg",
+    "teamName": "Backend Monsters",
+    "quote": "In the middle of every difficulty lies opportunity.",
+    "corpid": "vs1234"
+  },
+  {
+    "name": "Harsh",
+    "department": "Middleware",
+    "imageLink": "https://example.com/images/williamlee.jpg",
+    "teamName": "Disco Ninjas",
+    "quote": "Life is what happens when you're busy making other plans.",
+    "corpid": "ha5678"
+  },
+  {
+    "name": "Senthooran",
+    "department": "Middleware",
+    "imageLink": "https://example.com/images/susanwhite.jpg",
+    "teamName": "Disco Ninjas",
+    "quote": "The future belongs to those who believe in the beauty of their dreams.",
+    "corpid": "se1234"
+  },
+  {
+    "name": "Suman",
+    "department": "Middleware",
+    "imageLink": "https://example.com/images/jameshall.jpg",
+    "teamName": "Disco Ninjas",
+    "quote": "The only way to do great work is to love what you do.",
+    "corpid": "su5678"
+  },
+  {
+    "name": "Kshama",
+    "department": "Middleware",
+    "imageLink": "https://example.com/images/karenclark.jpg",
+    "teamName": "Disco Ninjas",
+    "quote": "If you really look closely, most overnight successes took a long time.",
+    "corpid": "ks1234"
+  },
+  {
+    "name": "Shreevanth",
+    "department": "Backend",
+    "imageLink": "https://example.com/images/davidturner.jpg",
+    "teamName": "Disco Ninjas",
+    "quote": "Don't count the days, make the days count.",
+    "corpid": "sh5678"
+  },
+  {
+    "name": "Gayatri",
+    "department": "Backend",
+    "imageLink": "https://example.com/images/margaretmiller.jpg",
+    "teamName": "Disco Ninjas",
+    "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "corpid": "ga1234"
+  },
+  {
+    "name": "Sinchana",
+    "department": "Frontend",
+    "imageLink": "https://example.com/images/richardharris.jpg",
+    "teamName": "Disco Ninjas",
+    "quote": "Strive not to be a success, but rather to be of value.",
+    "corpid": "si5678"
+  },
+  {
+    "name": "Patricia Taylor",
+    "department": "Frontend",
+    "imageLink": "https://example.com/images/patriciataylor.jpg",
+    "teamName": "Disco Ninjas",
+    "quote": "The future belongs to those who believe in the beauty of their dreams.",
+    "corpid": "pt1234"
+  },
+  {
+    "name": "Christopher Anderson",
+    "department": "Frontend",
+    "imageLink": "https://example.com/images/christopheranderson.jpg",
+    "teamName": "Disco Ninjas",
+    "quote": "Life is what happens when you're busy making other plans.",
+    "corpid": "ca5678"
+  },
+  {
+    "name": "Mary Martin",
+    "department": "Middleware",
+    "imageLink": "https://example.com/images/marymartin.jpg",
+    "teamName": "Disco Ninjas",
+    "quote": "If you really look closely, most overnight successes took a long time.",
+    "corpid": "mm1234"
+  },
+  {
+    "name": "Daniel Martinez",
+    "department": "Middleware",
+    "imageLink": "https://example.com/images/danielmartinez.jpg",
+    "teamName": "Disco Ninjas",
+    "quote": "Don't count the days, make the days count.",
+    "corpid": "dm5678"
+  },
+  {
+    "name": "Nancy Lewis",
+    "department": "Middleware",
+    "imageLink": "https://example.com/images/nancylewis.jpg",
+    "teamName": "Disco Ninjas",
+    "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "corpid": "nl1234"
+  },
+  {
+    "name": "Paul Garcia",
+    "department": "Backend",
+    "imageLink": "https://example.com/images/paulgarcia.jpg",
+    "teamName": "Disco Ninjas",
+    "quote": "Strive not to be a success, but rather to be of value.",
+    "corpid": "pg5678"
+  },
+  {
+    "name": "Abhishek",
+    "department": "Backend",
+    "imageLink": "https://example.com/images/elizabethallen.jpg",
+    "teamName": "Friends of Nayan",
+    "quote": "Life is what happens when you're busy making other plans.",
+    "corpid": "ab1234"
+  },
+  {
+    "name": "Anish",
+    "department": "Backend",
+    "imageLink": "https://example.com/images/frankbrown.jpg",
+    "teamName": "Friends of Nayan",
+    "quote": "The future belongs to those who believe in the beauty of their dreams.",
+    "corpid": "an5678"
+  },
+  {
+    "name": "Siddarth",
+    "department": "Frontend",
+    "imageLink": "https://example.com/images/meganhall.jpg",
+    "teamName": "Friends of Nayan",
+    "quote": "Don't count the days, make the days count.",
+    "corpid": "si1234"
+  },
+  {
+    "name": "Nayan",
+    "department": "Frontend",
+    "imageLink": "https://example.com/images/thomaswright.jpg",
+    "teamName": "Friends of Nayan",
+    "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "corpid": "na5678"
+  },
+  {
+    "name": "Blessy",
+    "department": "Frontend",
+    "imageLink": "https://example.com/images/jenniferscott.jpg",
+    "teamName": "Friends of Nayan",
+    "quote": "Strive not to be a success, but rather to be of value.",
+    "corpid": "bl1234"
+  },
+  {
+    "name": "Rahul Nayak",
+    "department": "Middleware",
+    "imageLink": "https://example.com/images/charlesgreen.jpg",
+    "teamName": "Friends of Nayan",
+    "quote": "Life is what happens when you're busy making other plans.",
+    "corpid": "rn5678"
+  },
+  {
+    "name": "Vanditha",
+    "department": "Middleware",
+    "imageLink": "https://example.com/images/annaadams.jpg",
+    "teamName": "Friends of Nayan",
+    "quote": "The future belongs to those who believe in the beauty of their dreams.",
+    "corpid": "va1234"
+  },
+  {
+    "name": "Aditya",
+    "department": "Middleware",
+    "imageLink": "https://example.com/images/annaadams.jpg",
+    "teamName": "Friends of Nayan",
+    "quote": "Don't count the days, make the days count.",
+    "corpid": "ad5678"
+  }
+]
