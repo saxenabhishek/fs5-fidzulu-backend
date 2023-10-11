@@ -1,6 +1,6 @@
-const { inFood } = require('../../../src/controllers/foodController');
-const { irFood } = require('../../../src/controllers/foodController');
-const { usFood } = require('../../../src/controllers/foodController');
+const { inFood } = require('../../src/controllers/foodController');
+const { irFood } = require('../../src/controllers/foodController');
+const { usFood } = require('../../src/controllers/foodController');
 
 describe('inFood test', () => {
   it('should add 8% tax to each item in the result array', () => {
