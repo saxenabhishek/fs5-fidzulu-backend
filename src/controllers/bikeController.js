@@ -3,25 +3,29 @@ const response = require('../configs/response');
 
  const usBikes = (result) => {
     for (let res of result) {
-        const precision = 2;
-        let price = res[5];
+        let price = res[5]
         res[5] = Number((price + price * 0.18).toFixed(2));
+        console.log(res[5] + "THIS IS FOR US");
+
     }
     return result;
  }
 
  const irBikes = (result) => {
     for (let res of result) {
-        let price = res[5];
+        let price = res[5]
         res[5] = Number((price + price * 0.23).toFixed(2));
+        console.log(res[5] + "i am in ireland");
     }
     return result;
  }
 
  const inBikes = (result) => {
     for(let res of result) {
-        let price = res[5];
+        let price = res[5]
         res[5] = Number((price + price * 0.08).toFixed(2));
+        console.log(res[5]);
+
     }
     return result;
  }
@@ -30,12 +34,12 @@ const response = require('../configs/response');
         try {
             let result = await getBikeDetails();
             switch(req.params.location){
-                case"US-NC" : result = usBikes(result)
-                    break;
                 case "IE" : result = irBikes(result)
-                    break;
+                    break
                 case "IN" : result = inBikes(result)
-                    break;
+                    break
+                case "US-NC" : result = usBikes(result)
+                    break
             }
 
             if (result.length) {
