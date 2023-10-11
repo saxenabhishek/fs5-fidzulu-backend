@@ -7,7 +7,7 @@ const connection = require("./src/configs/db");
 const teamsRouter = require('./src/routes/teamsRoute');
 
 const app = express();
-const port = 3036;
+const laptopPort = 3036;
 connection.getConnection();
 
 app.use(bodyParser.json());
@@ -19,6 +19,6 @@ app.use(teamsRouter);
 app.get('/', laptopRouter);
 app.get('/',teamsRouter);
 
-app.listen(port, '0.0.0.0', () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+app.listen(laptopPort, '0.0.0.0', () => {
+  console.log(`Example app listening at http://localhost:${laptopPort}`);
 });

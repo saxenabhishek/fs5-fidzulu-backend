@@ -2,6 +2,9 @@ const { getLaptopDetails } = require('../models/productModel');
 const response = require('../configs/response');
 
 const usLaptop = (result) => {
+    if(result == null){
+        return {};
+    }
     for (let res of result) {
         let price = res[10];
         res[10] = Number((price + price * 0.08).toFixed(2));
@@ -10,6 +13,9 @@ const usLaptop = (result) => {
 } 
 
 const irLaptop = (result) => {
+    if(result == null){
+        return {};
+    }
     for (let res of result) {
         let price = res[10];
         res[10] = Number((price + price * 0.23).toFixed(2));
@@ -18,6 +24,9 @@ const irLaptop = (result) => {
 } 
 
 const inLaptop = (result) => {
+    if(result == null){
+        return {};
+    }
     for (let res of result) {
         let price = res[10]
         res[10] = Number((price + price * 0.18).toFixed(2));
@@ -50,3 +59,6 @@ const inLaptop = (result) => {
     }
 
 exports.getLaptop = getLaptop;
+exports.inLaptop =inLaptop;
+exports.usLaptop = usLaptop;
+exports.irLaptop = irLaptop;
