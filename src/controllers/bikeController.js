@@ -2,30 +2,38 @@ const { getBikeDetails } = require('../models/productModel');
 const response = require('../configs/response');
 
  const usBikes = (result) => {
+    if(result == null){
+        return{};
+    }
     for (let res of result) {
-        let price = res[5]
-        res[5] = Number((price + price * 0.08).toFixed(2));
-        console.log(res[5] + "THIS IS FOR US");
+        let price = res.price
+        res.price = Number((price + price * 0.08).toFixed(2));
+        //console.log(res[5] + "THIS IS FOR US");
 
     }
     return result;
  }
 
  const irBikes = (result) => {
+    if(result == null){
+        return {};
+    }
     for (let res of result) {
-        let price = res[5]
-        res[5] = Number((price + price * 0.23).toFixed(2));
-        console.log(res[5] + "i am in ireland");
+        let price = res.price
+        res.price = Number((price + price * 0.23).toFixed(2));
+        //console.log(res[5] + "i am in ireland");
     }
     return result;
  }
 
  const inBikes = (result) => {
+    if(result == null){
+        return {};
+    }
     for(let res of result) {
-        let price = res[5]
-        res[5] = Number((price + price * 0.18).toFixed(2));
-        console.log(res[5]);
-
+        let price = res.price
+        res.price = Number((price + price * 0.18).toFixed(2));
+        //console.log(res[5]);
     }
     return result;
  }
@@ -56,3 +64,6 @@ const response = require('../configs/response');
     
 
 exports.getBikes = getBikes
+exports.inBikes = inBikes
+exports.usBikes = usBikes
+exports.irBikes = irBikes

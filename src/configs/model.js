@@ -18,14 +18,6 @@ module.exports = async (query, data = '') => {
         connectionString: oracleXeConnString
     }).then(console.log("connected successfully"));
 
-  return new Promise((resolve, reject) => {
-    connection.execute(query, (err, results) => { // Fix the arrow function definition here
-      if (err) {
-        reject(err);
-      } else {
+    return (await connection.execute(query)).rows;
 
-        resolve(results.rows);
-      }
-    });
-  });
 };
