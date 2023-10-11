@@ -1,8 +1,8 @@
-const { inFood } = require('../../../src/controllers/foodController');
-const { irFood } = require('../../../src/controllers/foodController');
-const { usFood } = require('../../../src/controllers/foodController');
+const { inFood } = require('../../src/controllers/foodController');
+const { irFood } = require('../../src/controllers/foodController');
+const { usFood } = require('../../src/controllers/foodController');
 
-describe('inFood test', () => {
+describe('usFood test', () => {
   it('should add 8% tax to each item in the result array', () => {
     const input =
       [
@@ -13,13 +13,13 @@ describe('inFood test', () => {
       [401, "Spaghetti", "Pasta", 3, 1, 53.99, 4.5, "https://shorturl.at/dwW56"],
       [402, "Lays", "Chips", 6, 1, 32.39, 3.8, "https://shorturl.at/oxBKZ"]
     ];
-    const result = inFood(input);
+    const result = usFood(input);
     expect(result).toEqual(expectedOutput);
   });
 
   it('should handle invalid input gracefully', () => {
     const invalidData = null;
-    const result = inFood(invalidData);
+    const result = usFood(invalidData);
     expect(result).toEqual({});
   });
 });
@@ -54,7 +54,7 @@ describe('irFood test', () => {
   });
 });
 
-describe('usFood test', () => {
+describe('inFood test', () => {
   it('should add 18% tax to each item in the result array', () => {
     const input = [
       [401, "Spaghetti", "Pasta", 3, 1, 49.99, 4.5, "https://shorturl.at/dwW56"],
@@ -74,7 +74,7 @@ describe('usFood test', () => {
       [406, "Dates", "Fruits", 3, 1, 23.59, 4.6, "https://shorturl.at/oBPR1"],
 
     ];
-    const result = usFood(input);
+    const result = inFood(input);
     expect(result).toEqual(expectedOutput);
   });
 
