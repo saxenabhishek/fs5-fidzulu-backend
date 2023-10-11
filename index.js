@@ -8,7 +8,7 @@ const teamsRouter=require('./src/routes/teamsRoute')
 const connection = require("./src/configs/db");
 
 const app = express();
-const port = process.env.BOOK_PORT;
+const port = process.env.TOY_PORT;
 connection.getConnection();
 
 app.use(bodyParser.json());
