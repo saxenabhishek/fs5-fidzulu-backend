@@ -24,7 +24,5 @@ module.exports = {
             laptopArr.push(laptopObj);
         }
         return laptopArr;
-       
-        return model(query);
     }
 }

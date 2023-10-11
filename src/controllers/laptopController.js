@@ -2,6 +2,10 @@ const { getLaptopDetails } = require('../models/productModel');
 const response = require('../configs/response');
 
 const usLaptop = (result) => {
+    if (!Array.isArray(result)) {
+        // Handle non-iterable input here
+        return {};
+      }
     if(result == null){
         return {};
     }
@@ -13,6 +17,10 @@ const usLaptop = (result) => {
 } 
 
 const irLaptop = (result) => {
+    if (!Array.isArray(result)) {
+        // Handle non-iterable input here
+        return {};
+      }
     if(result == null){
         return {};
     }
@@ -24,6 +32,10 @@ const irLaptop = (result) => {
 } 
 
 const inLaptop = (result) => {
+    if (!Array.isArray(result)) {
+        // Handle non-iterable input here
+        return {};
+      }
     if(result == null){
         return {};
     }
