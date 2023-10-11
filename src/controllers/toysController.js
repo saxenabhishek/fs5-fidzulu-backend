@@ -2,10 +2,44 @@ const response = require("../configs/response");
 const { getToyDetails } = require("../models/productModel")
 
 
+const usToys = (result) => {
+    for (let res of result) {
+        const precision = 2;
+        let price = res[5]
+        res[5] = Number((price + price * 0.18).toFixed(2));
+        
+    }
+    return result;
+}
+
+const ieToys = (result) => {
+    for (let res of result) {
+        let price = res[5]
+        res[5] = Number((price + price * 0.23).toFixed(2));
+    }
+    return result;
+}
+
+const inToys = (result) => {
+    for (let res of result) {
+        let price = res[5]
+        res[5] = Number((price + price * 0.08).toFixed(2));
+    }
+    return result;
+}
+
+
 const getToys = async(req,res)=>{
     try{
-        const result= await getToyDetails();
-        console.log(result);
+        let result= await getToyDetails();
+        switch(req.params.location){
+            case "US-NC" : result = usToys(result)
+                            break;
+            case "IE" : result = ieToys(result)
+                            break;
+            case "IN" : result = inToys(result)
+                            break;
+        }
 
         if (result.length) {
             return response(res, 'List of Food', 200, true, result);
