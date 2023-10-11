@@ -3,6 +3,10 @@ const { getToyDetails } = require("../models/productModel")
 
 
 const usToys = (result) => {
+    if (!Array.isArray(result)) {
+        // Handle non-iterable input here, e.g., return an empty object or handle the error
+        return {};
+      }
     for (let res of result) {
         const precision = 2;
         let price = res.Price
@@ -13,6 +17,10 @@ const usToys = (result) => {
 }
 
 const ieToys = (result) => {
+    if (!Array.isArray(result)) {
+        // Handle non-iterable input here, e.g., return an empty object or handle the error
+        return {};
+      }
     for (let res of result) {
         let price = res.Price
         res.Price = Number((price + price * 0.23).toFixed(2));
@@ -21,6 +29,10 @@ const ieToys = (result) => {
 }
 
 const inToys = (result) => {
+    if (!Array.isArray(result)) {
+        // Handle non-iterable input here, e.g., return an empty object or handle the error
+        return {};
+      }
     for (let res of result) {
         let price = res.Price
         res.Price = Number((price + price * 0.18).toFixed(2));
@@ -53,4 +65,7 @@ const getToys = async(req,res)=>{
     
 }
 
+exports.usToys=usToys
+exports.ieToys=ieToys
+exports.inToys=inToys
 exports.getToys=getToys
