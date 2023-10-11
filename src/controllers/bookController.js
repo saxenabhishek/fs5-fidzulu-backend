@@ -60,3 +60,6 @@ const inBook = (result) => {
     }
 
 exports.getBook = getBook
+exports.usBook = usBook
+exports.irBook = irBook
+exports.inBook = inBook

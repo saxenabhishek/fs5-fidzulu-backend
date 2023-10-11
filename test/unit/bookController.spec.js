@@ -6,12 +6,18 @@ describe('usBook test', () => {
   it('should add 8% tax to each item in the result array', () => {
     const input =
       [
-        [401, "Spaghetti", "Pasta", 3, 1, 49.99, 4.5, "https://shorturl.at/dwW56"],
-        [402, "Lays", "Chips", 6, 1, 29.99, 3.8, "https://shorturl.at/oxBKZ"]
+        [201, "A Game of Thrones", "Fantasy", "George R.R. Martin", "Bantam", 11.79, 4.5, "https://shorturl.at/jyN45"],
+        [202, "To Kill a Mockingbird", "Fiction", "Harper Lee", "Harper Perennial", 15.33, 4.8, "https://shorturl.at/iovDL"],
+        [203, "The Da Vinci Code", "Mystery", "Dan Brown", "Vintage", 10.61, 4.2, "https://shorturl.at/blDHX"],
+        [204, "Harry Potter and the Order of the Phoenix", "Fantasy", "J.K. Rowling", "Scholastic", 17.69, 4.7, "https://shorturl.at/ivxSX"],
+        [205, "The Great Gatsby", "Classic", "F. Scott Fitzgerald", "Penguin", 9.43, 4, "https://shorturl.at/biQX4"]
       ];
     const expectedOutput = [
-      [401, "Spaghetti", "Pasta", 3, 1, 53.99, 4.5, "https://shorturl.at/dwW56"],
-      [402, "Lays", "Chips", 6, 1, 32.39, 3.8, "https://shorturl.at/oxBKZ"]
+      [201, "A Game of Thrones", "Fantasy", "George R.R. Martin", "Bantam", 12.73, 4.5, "https://shorturl.at/jyN45"],
+      [202, "To Kill a Mockingbird", "Fiction", "Harper Lee", "Harper Perennial", 16.56, 4.8, "https://shorturl.at/iovDL"],
+      [203, "The Da Vinci Code", "Mystery", "Dan Brown", "Vintage", 11.46, 4.2, "https://shorturl.at/blDHX"],
+      [204, "Harry Potter and the Order of the Phoenix", "Fantasy", "J.K. Rowling", "Scholastic", 19.11, 4.7, "https://shorturl.at/ivxSX"],
+      [205, "The Great Gatsby", "Classic", "F. Scott Fitzgerald", "Penguin", 10.18, 4, "https://shorturl.at/biQX4"]
     ];
     const result = usBook(input);
     expect(result).toEqual(expectedOutput);
@@ -24,63 +30,58 @@ describe('usBook test', () => {
   });
 });
 
-describe('irFood test', () => {
+describe('irBook test', () => {
   it('should add 23% tax to each item in the result array', () => {
-    const input = [
-      [401, "Spaghetti", "Pasta", 3, 1, 49.99, 4.5, "https://shorturl.at/dwW56"],
-      [402, "Lays", "Chips", 6, 1, 29.99, 3.8, "https://shorturl.at/oxBKZ"],
-      [403, "Jam", "Spreads", 6, 1, 79.99, 4.7, "https://shorturl.at/atwMQ"],
-      [404, "Frozen meat", "Meat", 1, 0, 14.99, 3.7, "https://shorturl.at/jnsMN"],
-      [405, "Apple", "Fruits", 1, 1, 9.99, 4.2, "https://shorturl.at/anty6"],
-      [406, "Dates", "Fruits", 3, 1, 19.99, 4.6, "https://shorturl.at/oBPR1"],
-    ];
+    const input =
+      [
+        [201, "A Game of Thrones", "Fantasy", "George R.R. Martin", "Bantam", 11.79, 4.5, "https://shorturl.at/jyN45"],
+        [202, "To Kill a Mockingbird", "Fiction", "Harper Lee", "Harper Perennial", 15.33, 4.8, "https://shorturl.at/iovDL"],
+        [203, "The Da Vinci Code", "Mystery", "Dan Brown", "Vintage", 10.61, 4.2, "https://shorturl.at/blDHX"],
+        [204, "Harry Potter and the Order of the Phoenix", "Fantasy", "J.K. Rowling", "Scholastic", 17.69, 4.7, "https://shorturl.at/ivxSX"],
+        [205, "The Great Gatsby", "Classic", "F. Scott Fitzgerald", "Penguin", 9.43, 4, "https://shorturl.at/biQX4"]
+      ];
     const expectedOutput = [
-      [401, "Spaghetti", "Pasta", 3, 1, 61.49, 4.5, "https://shorturl.at/dwW56"],
-      [402, "Lays", "Chips", 6, 1, 36.89, 3.8, "https://shorturl.at/oxBKZ"],
-      [403, "Jam", "Spreads", 6, 1, 98.39, 4.7, "https://shorturl.at/atwMQ"],
-      [404, "Frozen meat", "Meat", 1, 0, 18.44, 3.7, "https://shorturl.at/jnsMN"],
-      [405, "Apple", "Fruits", 1, 1, 12.29, 4.2, "https://shorturl.at/anty6"],
-      [406, "Dates", "Fruits", 3, 1, 24.59, 4.6, "https://shorturl.at/oBPR1"],
-
+      [201, "A Game of Thrones", "Fantasy", "George R.R. Martin", "Bantam", 14.5, 4.5, "https://shorturl.at/jyN45"],
+      [202, "To Kill a Mockingbird", "Fiction", "Harper Lee", "Harper Perennial", 18.86, 4.8, "https://shorturl.at/iovDL"],
+      [203, "The Da Vinci Code", "Mystery", "Dan Brown", "Vintage", 13.05, 4.2, "https://shorturl.at/blDHX"],
+      [204, "Harry Potter and the Order of the Phoenix", "Fantasy", "J.K. Rowling", "Scholastic", 21.76, 4.7, "https://shorturl.at/ivxSX"],
+      [205, "The Great Gatsby", "Classic", "F. Scott Fitzgerald", "Penguin", 11.6, 4, "https://shorturl.at/biQX4"]
     ];
-    const result = irFood(input);
+    const result = irBook(input);
     expect(result).toEqual(expectedOutput);
   });
 
   it('should handle invalid input gracefully', () => {
     const invalidData = null;
-    const result = irFood(invalidData);
+    const result = irBook(invalidData);
     expect(result).toEqual({});
   });
 });
 
-describe('inFood test', () => {
+describe('inBook test', () => {
   it('should add 18% tax to each item in the result array', () => {
-    const input = [
-      [401, "Spaghetti", "Pasta", 3, 1, 49.99, 4.5, "https://shorturl.at/dwW56"],
-      [402, "Lays", "Chips", 6, 1, 29.99, 3.8, "https://shorturl.at/oxBKZ"],
-      [403, "Jam", "Spreads", 6, 1, 79.99, 4.7, "https://shorturl.at/atwMQ"],
-      [404, "Frozen meat", "Meat", 1, 0, 14.99, 3.7, "https://shorturl.at/jnsMN"],
-      [405, "Apple", "Fruits", 1, 1, 9.99, 4.2, "https://shorturl.at/anty6"],
-      [406, "Dates", "Fruits", 3, 1, 19.99, 4.6, "https://shorturl.at/oBPR1"],
-
-    ];
+    const input =
+      [
+        [201, "A Game of Thrones", "Fantasy", "George R.R. Martin", "Bantam", 11.79, 4.5, "https://shorturl.at/jyN45"],
+        [202, "To Kill a Mockingbird", "Fiction", "Harper Lee", "Harper Perennial", 15.33, 4.8, "https://shorturl.at/iovDL"],
+        [203, "The Da Vinci Code", "Mystery", "Dan Brown", "Vintage", 10.61, 4.2, "https://shorturl.at/blDHX"],
+        [204, "Harry Potter and the Order of the Phoenix", "Fantasy", "J.K. Rowling", "Scholastic", 17.69, 4.7, "https://shorturl.at/ivxSX"],
+        [205, "The Great Gatsby", "Classic", "F. Scott Fitzgerald", "Penguin", 9.43, 4, "https://shorturl.at/biQX4"]
+      ];
     const expectedOutput = [
-      [401, "Spaghetti", "Pasta", 3, 1, 58.99, 4.5, "https://shorturl.at/dwW56"],
-      [402, "Lays", "Chips", 6, 1, 35.39, 3.8, "https://shorturl.at/oxBKZ"],
-      [403, "Jam", "Spreads", 6, 1, 94.39, 4.7, "https://shorturl.at/atwMQ"],
-      [404, "Frozen meat", "Meat", 1, 0, 17.69, 3.7, "https://shorturl.at/jnsMN"],
-      [405, "Apple", "Fruits", 1, 1, 11.79, 4.2, "https://shorturl.at/anty6"],
-      [406, "Dates", "Fruits", 3, 1, 23.59, 4.6, "https://shorturl.at/oBPR1"],
-
+      [201, "A Game of Thrones", "Fantasy", "George R.R. Martin", "Bantam", 13.91, 4.5, "https://shorturl.at/jyN45"],
+      [202, "To Kill a Mockingbird", "Fiction", "Harper Lee", "Harper Perennial", 18.09, 4.8, "https://shorturl.at/iovDL"],
+      [203, "The Da Vinci Code", "Mystery", "Dan Brown", "Vintage", 12.52, 4.2, "https://shorturl.at/blDHX"],
+      [204, "Harry Potter and the Order of the Phoenix", "Fantasy", "J.K. Rowling", "Scholastic", 20.87, 4.7, "https://shorturl.at/ivxSX"],
+      [205, "The Great Gatsby", "Classic", "F. Scott Fitzgerald", "Penguin", 11.13, 4, "https://shorturl.at/biQX4"]
     ];
-    const result = inFood(input);
+    const result = inBook(input);
     expect(result).toEqual(expectedOutput);
   });
 
   it('should handle invalid input gracefully', () => {
     const invalidData = null;
-    const result = usBook(invalidData);
+    const result = inBook(invalidData);
     expect(result).toEqual({});
   });
 });
