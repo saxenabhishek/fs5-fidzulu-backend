@@ -1,6 +1,6 @@
 const { getFoodDetails } = require('../models/productModel');
 const response = require('../configs/response');
-const usFood = (result) => {
+const inFood = (result) => {
     if(result == null){
         return {};
     }
@@ -24,7 +24,7 @@ const irFood = (result) => {
     return result;
 }
 
-const inFood = (result) => {
+const usFood = (result) => {
     if(result == null){
         return {};
     }
