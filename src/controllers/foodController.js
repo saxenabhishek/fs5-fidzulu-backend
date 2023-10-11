@@ -7,7 +7,7 @@ const inFood = (result) => {
     for (let res of result) {
         const precision = 2;
         let price = res[5]
-        res[5] = Number((price + price * 0.08).toFixed(2));
+        res[5] = Number((price + price * 0.18).toFixed(2));
         
     }
     return result;
@@ -30,7 +30,7 @@ const usFood = (result) => {
     }
     for (let res of result) {
         let price = res[5]
-        res[5] = Number((price + price * 0.18).toFixed(2));
+        res[5] = Number((price + price * 0.08).toFixed(2));
     }
     return result;
 }
