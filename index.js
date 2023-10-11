@@ -6,7 +6,7 @@ const booksRouter = require('./src/routes/booksRoute');
 const connection = require("./src/configs/db");
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3034;
 connection.getConnection();
 
 app.use(bodyParser.json());
