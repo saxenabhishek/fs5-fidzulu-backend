@@ -2,9 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const oracledb = require('oracledb');
-const user=process.env.USER;
-const password=process.env.PASSWORD;
-const string=process.env.CONNECTION_STRING;
+// const user=process.env.USER;
+// const password=process.env.PASSWORD;
+// const string=process.env.CONNECTION_STRING;
 // const oracleXeConnString = `
 //   (DESCRIPTION =
 //     (ADDRESS = (PROTOCOL = TCP)(HOST = LOCALHOST)(PORT = 1521))
