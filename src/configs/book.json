@@ -1,0 +1,52 @@
+[
+    [
+        201,
+        "A Game of Thrones",
+        "Fantasy",
+        "George R.R. Martin",
+        "Bantam",
+        9.99,
+        4.5,
+        "https://shorturl.at/jyN45"
+    ],
+    [
+        202,
+        "To Kill a Mockingbird",
+        "Fiction",
+        "Harper Lee",
+        "Harper Perennial",
+        12.99,
+        4.8,
+        "https://shorturl.at/iovDL"
+    ],
+    [
+        203,
+        "The Da Vinci Code",
+        "Mystery",
+        "Dan Brown",
+        "Vintage",
+        8.99,
+        4.2,
+        "https://shorturl.at/blDHX"
+    ],
+    [
+        204,
+        "Harry Potter and the Order of the Phoenix",
+        "Fantasy",
+        "J.K. Rowling",
+        "Scholastic",
+        14.99,
+        4.7,
+        "https://shorturl.at/ivxSX"
+    ],
+    [
+        205,
+        "The Great Gatsby",
+        "Classic",
+        "F. Scott Fitzgerald",
+        "Penguin",
+        7.99,
+        4,
+        "https://shorturl.at/biQX4"
+    ]
+]
