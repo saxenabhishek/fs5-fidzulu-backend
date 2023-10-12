@@ -1,4 +1,6 @@
 // const db = require('./db');
+const fs = require('fs');
+const path = require('path');
 const oracledb = require('oracledb');
 const user=process.env.USER;
 const password=process.env.PASSWORD;
@@ -14,11 +16,15 @@ const string=process.env.CONNECTION_STRING;
 // `;
 
 module.exports = async (query, data = '') => {
-    const connection = await oracledb.getConnection({ 
-        user: user, 
-        password: password, 
-        connectionString: string
-    }).then(console.log("connected successfully"));
-
-    return (await connection.execute(query)).rows;
+    // const connection = await oracledb.getConnection({ 
+    //     user: user, 
+    //     password: password, 
+    //     connectionString: string
+    // }).then(console.log("connected successfully"));
+    // console.log((await connection.execute(query)).rows);
+    // return (await connection.execute(query)).rows;
+    const filePath = path.join(__dirname, 'food.json');
+    const jsonData = fs.readFileSync(filePath, 'utf8');
+    const foodData = JSON.parse(jsonData);
+    return foodData;
 };
