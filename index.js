@@ -8,7 +8,7 @@ const teamsRouter = require('./src/routes/teamsRoute');
 
 const app = express();
 const laptopPort = process.env.LAPTOP_PORT;
-connection.getConnection();
+// connection.getConnection();
 
 app.use(bodyParser.json());
 app.use(cors());

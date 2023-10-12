@@ -1,15 +1,18 @@
-// const db = require('./db');
-const oracledb = require('oracledb');
-const user = process.env.USER;
-const password = process.env.PASSWORD;
-const oracleXeConnString = process.env.CONNECTION_STRING;
+const fs = require('fs');
+const path = require('path');
+// const oracledb = require('oracledb');
+// const user = process.env.USER;
+// const password = process.env.PASSWORD;
+// const oracleXeConnString = process.env.CONNECTION_STRING;
 
 module.exports = async (query, data = '') => {
-  const connection = await oracledb.getConnection({ 
-      user: user, 
-      password: password, 
-      connectionString: oracleXeConnString
-  }).then(console.log("connected successfully"));
+  // const connection = await oracledb.getConnection({ 
+  //     user: user, 
+  //     password: password, 
+  //     connectionString: oracleXeConnString
+  // }).then(console.log("connected successfully"));
 
-  return (await connection.execute(query)).rows;
+  const filePath = path.join(__dirname, 'laptops.json');
+  const jsonData = fs.readFileSync(filePath, 'utf8');
+  return  JSON.parse(jsonData);
 };
