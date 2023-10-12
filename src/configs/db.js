@@ -1,5 +1,5 @@
-const oracledb = require('oracledb');
-const { DB_USER, DB_PASSWORD, DB_CONNECT_STRING } = process.env;
+//const oracledb = require('oracledb');
+//const { DB_USER, DB_PASSWORD, DB_CONNECT_STRING } = process.env;
 
 // async function connectToOracle() {
 //   try {
@@ -22,27 +22,27 @@ const { DB_USER, DB_PASSWORD, DB_CONNECT_STRING } = process.env;
 //   }
 // }
 
-const oracleXeConnString = `
-  (DESCRIPTION =
-    (ADDRESS = (PROTOCOL = TCP)(HOST = LOCALHOST)(PORT = 1521))
-    (CONNECT_DATA =
-      (SERVER = DEDICATED)
-      (SERVICE_NAME = XEPDB1)
-    )
-  )
-`;
+// const oracleXeConnString = `
+//   (DESCRIPTION =
+//     (ADDRESS = (PROTOCOL = TCP)(HOST = LOCALHOST)(PORT = 1521))
+//     (CONNECT_DATA =
+//       (SERVER = DEDICATED)
+//       (SERVICE_NAME = XEPDB1)
+//     )
+//   )
+// `;
 
-async function getConnection() {
-  const connection = await oracledb.getConnection({ 
-      user: "scott", 
-      password: "TIGER", 
-      connectionString: oracleXeConnString
-  }).then(console.log("connected successfully"));
-  return connection;
-}
+// async function getConnection() {
+//   const connection = await oracledb.getConnection({ 
+//       user: "scott", 
+//       password: "TIGER", 
+//       connectionString: oracleXeConnString
+//   }).then(console.log("connected successfully"));
+//   return connection;
+// }
 
-// Call the function to establish a connection
+// // Call the function to establish a connection
 
-module.exports = {
-  getConnection
-};
+// module.exports = {
+//   getConnection
+// };

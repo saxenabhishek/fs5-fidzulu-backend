@@ -1,0 +1,62 @@
+[
+    [
+        101,
+        "Honda",
+        "CBR 1000RR",
+        300,
+        "Red",
+        499.99,
+        4.5,
+        "https://shorturl.at/zLNW1"
+    ],
+    [
+        102,
+        "Kawasaki",
+        "Ninja ZX-6R",
+        350,
+        "Green",
+        699.99,
+        3.8,
+        "https://shorturl.at/hkyC0"
+    ],
+    [
+        103,
+        "Yamaha",
+        "YZF-R1",
+        600,
+        "Blue",
+        599.99,
+        4.1,
+        "https://shorturl.at/yXYZ2"
+    ],
+    [
+        104,
+        "Suzuki",
+        "GSX-R750",
+        500,
+        "Black",
+        499.99,
+        2.9,
+        "https://shorturl.at/klnp8"
+    ],
+    [
+        105,
+        "Ducati",
+        "Panigale V4",
+        1000,
+        "Red",
+        459.99,
+        4.2,
+        "https://shorturl.at/bpRS9"
+    ],
+    [
+        106,
+        "BMW",
+        "S1000RR",
+        1100,
+        "Blue",
+        399.99,
+        3.9,
+        "https://shorturl.at/tCOS8"
+    ]
+]
