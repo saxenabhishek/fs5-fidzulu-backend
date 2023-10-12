@@ -7,8 +7,8 @@ const teamsRouter = require('./src/routes/teamsRoute');
 const connection = require("./src/configs/db");
 
 const app = express();
-const port = process.env.DVD_PORT;
-connection.getConnection();
+const port = process.env.DVD_PORT||3035;
+// connection.getConnection();
 
 app.use(bodyParser.json());
 app.use(cors());
