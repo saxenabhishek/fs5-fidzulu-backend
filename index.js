@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const dvdRouter = require('./src/routes/dvdRoute');
 const teamsRouter = require('./src/routes/teamsRoute');
-const connection = require("./src/configs/db");
+// const connection = require("./src/configs/db");
 
 const app = express();
 const port = process.env.DVD_PORT||3035;
